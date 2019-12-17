@@ -1,17 +1,15 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  //magic this = Object.create(makeBlinkyDancer.prototype)
-  makeDancer.call(this, top, left, timeBetweenSteps);
-  //magic return this
+var BlinkyDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
 };
 
 //inherit prototypes from parent
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+BlinkyDancer.prototype = Object.create(Dancer.prototype);
 //correct contstructor
-makeBlinkyDancer.prototype.contstructor = makeBlinkyDancer;
+BlinkyDancer.prototype.contstructor = BlinkyDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+BlinkyDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
-  makeDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
