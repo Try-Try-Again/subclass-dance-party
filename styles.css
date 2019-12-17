@@ -25,3 +25,18 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.spazzDancer{
+  border-radius:10px;
+  position:absolute;
+  content:url(spazz.jpg);
+  height:75px;
+  width:75px;
+}
+
+.bellDancer{
+  position:absolute;
+  transform: rotateX(45);
+  content:url(bell.svg);
+  height:75px;
+  width:75px;
+}
