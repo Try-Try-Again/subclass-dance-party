@@ -35,7 +35,7 @@ body, a:link, a:visited, a:active{
 
 .bellDancer{
   position:absolute;
-  transform: rotateX(45);
+  transform:rotateX(-50deg);
   content:url(bell.svg);
   height:75px;
   width:75px;
