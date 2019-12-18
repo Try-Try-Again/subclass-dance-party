@@ -32,8 +32,6 @@ Dancer.prototype.setPosition = function(top, left) {
   this.styleSettings.left = this.left;
   this.styleSettings.top = this.top;
 
-  console.log('In step: ' + this);
-
   if (this.lineUpMode) {
     this.lineUp();
   }
@@ -45,6 +43,5 @@ Dancer.prototype.toggleLineupMode = function() {
 };
 
 Dancer.prototype.lineUp = function() {
-  console.log('In lineup: ' + this);
   this.styleSettings.left = this.left = 10;
 };

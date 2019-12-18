@@ -5,6 +5,7 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url(bliss.jpg);
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -28,7 +29,7 @@ body, a:link, a:visited, a:active{
 .spazzDancer{
   border-radius:10px;
   position:absolute;
-  content:url(spazz.jpg);
+  content:url(bee.gif);
   height:75px;
   width:75px;
 }
