@@ -5,6 +5,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.styleSettings = {};
+  this.lineUpMode = false;
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
@@ -27,7 +28,23 @@ Dancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   //
-  this.styleSettings.top = this.top;
+
   this.styleSettings.left = this.left;
+  this.styleSettings.top = this.top;
+
+  console.log('In step: ' + this);
+
+  if (this.lineUpMode) {
+    this.lineUp();
+  }
   this.$node.css(this.styleSettings);
+};
+
+Dancer.prototype.toggleLineupMode = function() {
+  this.lineUpMode = !this.lineUpMode;
+};
+
+Dancer.prototype.lineUp = function() {
+  console.log('In lineup: ' + this);
+  this.styleSettings.left = this.left = 10;
 };
